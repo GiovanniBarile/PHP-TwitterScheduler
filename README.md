@@ -20,6 +20,8 @@ Il file index.php è la home page generale del programma, fa utilizzo del file
 1. Caricare la cronologia dei tweet programmati al caricamento della pagina
 2. Contare i caratteri rimanenti alla textArea
 3. Gestire le chiamate ai file php che si occupano di gestire i tweet e il database.
+
+
 I file php che vengono utilizzati sono i seguenti : 
 /func/php/dataFetcher.php che si occupa di leggere e ritornare in formato JSON le voci righe
 all’interno della tabella `scheduled_tweets` - ovvero i tweet programmati (inviati e non)
@@ -51,5 +53,6 @@ Creare un db “twitter_scheduler” e una tabella “scheduled_tweets” con la
 configurazione:
 Creare un cronjob utilizzando il seguente comando per effettuare la chiamata allo script che si 
 occupa della programmazione.
+
 “$ crontab -e”
 “* * * * * wget https://$url/func/php/job.php"
